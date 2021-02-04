@@ -11,8 +11,8 @@ const App = () => {
     const renderSave = () => {
         return JSON.parse(localStorage.getItem('blocnote'));
       }
-    const [inputValue, setInputValue] = React.useState(renderSave().value)
-    const [inputTitle, setInputTitle] = React.useState(renderSave().title)
+       const [inputValue, setInputValue] = React.useState(renderSave() ? renderSave().value : "" )
+    const [inputTitle, setInputTitle] = React.useState(renderSave() ? renderSave().title : "")
 
 
     const sendValue = (value) => {
