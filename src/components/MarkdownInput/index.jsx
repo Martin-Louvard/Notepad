@@ -4,8 +4,10 @@ const MarkdownInput = (props) => {
   const renderSave = () => {
     return JSON.parse(localStorage.getItem('blocnote'));
   }
-  const [value, setValue] = React.useState(renderSave().value);
-  const [title, setTitle] = React.useState(renderSave().title);
+  
+  
+  const [value, setValue] = React.useState(renderSave()? renderSave().value : "");
+  const [title, setTitle] = React.useState(renderSave() ? renderSave().title : "")
 
 
   const onChange = (event) => {
